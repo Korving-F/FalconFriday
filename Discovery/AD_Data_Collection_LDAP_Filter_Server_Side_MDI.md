@@ -71,7 +71,7 @@ let timeframe = 1h;
 let suspect_search_filter=dynamic([
     "objectGUID=*", // AD Explorer IOC
     "(schemaIDGUID=*)", // Sharphound IOC
-    "(&(objectclass=computer)(userAccountControl:1.2.840.113556.1.4.803:=8192))" // Sharphound IOC
+    "(&(objectclass=computer)(userAccountControl&8192))" // Sharphound IOC
     "(|(samAccountType=805306368)(samAccountType=805306369)(objectclass=organizationalUnit))", // Sharphound IOC
     "(|(samaccounttype=268435456)(samaccounttype=268435457)(samaccounttype=536870912)(samaccounttype=536870913))", // Sharphound IOC
     "(samAccountType=805306368)(samAccountType=805306369)" // Sharphound IOC
